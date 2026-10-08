@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpDesk IT | Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- =====================================================
+         CABEÇALHO / NAVBAR
+         Contém logo, menu de navegação e usuário logado.
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <!-- Logo da aplicação -->
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">HD</span>
+
+            <div class="logo-text">
+                <strong>HelpDesk IT</strong>
+                <small>Service Desk</small>
+            </div>
+
+        </a>
+
+
+        <!-- Menu principal -->
+        <nav class="main-nav">
+
+            <a href="index.html" class="active">
+                Dashboard
+            </a>
+
+            <a href="chamados.html">
+                Chamados
+            </a>
+
+            <a href="novo-chamado.html">
+                Novo chamado
+            </a>
+
+            <a href="conhecimento.html">
+                Base de conhecimento
+            </a>
+
+        </nav>
+
+
+        <!-- Informações do técnico logado -->
+        <div class="user-profile">
+
+            <div class="user-avatar">
+                AR
+            </div>
+
+            <div class="user-info">
+                <strong>Alisson Rodrigues</strong>
+                <small>Técnico de Suporte</small>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="container">
+
+
+        <!-- =================================================
+             TÍTULO DO DASHBOARD
+        ================================================== -->
+
+        <section class="page-header">
+
+            <div class="page-title">
+
+                <span class="eyebrow">
+                    CENTRAL DE ATENDIMENTO
+                </span>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Acompanhe os chamados e as atividades do
+                    suporte técnico.
+                </p>
+
+            </div>
+
+
+            <!-- Botão para abrir um novo chamado -->
+            <a href="novo-chamado.html" class="btn btn-primary">
+                + Novo chamado
+            </a>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CARDS DE ESTATÍSTICAS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- Card: chamados abertos -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    🎫
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Chamados abertos
+                    </span>
+
+                    <strong id="chamados-abertos">
+                        12
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card: chamados em atendimento -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    🔄
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Em atendimento
+                    </span>
+
+                    <strong id="em-atendimento">
+                        4
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card: chamados pendentes -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    ⏳
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Pendentes
+                    </span>
+
+                    <strong id="pendentes">
+                        3
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card: chamados resolvidos -->
+            <article class="stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div class="stat-content">
+
+                    <span>
+                        Resolvidos
+                    </span>
+
+                    <strong id="resolvidos">
+                        27
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ÁREA PRINCIPAL DO DASHBOARD
+        ================================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =================================================
+                 LISTA DE CHAMADOS RECENTES
+            ================================================== -->
+
+            <article class="panel">
+
+
+                <!-- Cabeçalho do painel -->
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Chamados recentes
+                        </h2>
+
+                        <p>
+                            Últimos atendimentos registrados
+                        </p>
+
+                    </div>
+
+                    <a href="chamados.html">
+                        Ver todos
+                    </a>
+
+                </div>
+
+
+                <!-- Lista de chamados -->
+                <div class="ticket-list">
+
+
+                    <!-- Chamado 1042 -->
+                    <article class="ticket">
+
+                        <span class="ticket-id">
+                            #1042
+                        </span>
+
+                        <div class="ticket-info">
+
+                            <strong>
+                                Computador não liga
+                            </strong>
+
+                            <span>
+                                João Silva • Financeiro
+                            </span>
+
+                        </div>
+
+                        <span class="badge priority-high">
+                            Alta
+                        </span>
+
+                        <span class="badge status-open">
+                            Aberto
+                        </span>
+
+                    </article>
+
+
+                    <!-- Chamado 1041 -->
+                    <article class="ticket">
+
+                        <span class="ticket-id">
+                            #1041
+                        </span>
+
+                        <div class="ticket-info">
+
+                            <strong>
+                                Impressora não imprime
+                            </strong>
+
+                            <span>
+                                Maria Souza • RH
+                            </span>
+
+                        </div>
+
+                        <span class="badge priority-medium">
+                            Média
+                        </span>
+
+                        <span class="badge status-progress">
+                            Em atendimento
+                        </span>
+
+                    </article>
+
+
+                    <!-- Chamado 1040 -->
+                    <article class="ticket">
+
+                        <span class="ticket-id">
+                            #1040
+                        </span>
+
+                        <div class="ticket-info">
+
+                            <strong>
+                                Solicitação de troca de senha
+                            </strong>
+
+                            <span>
+                                Carlos Mendes • Comercial
+                            </span>
+
+                        </div>
+
+                        <span class="badge priority-low">
+                            Baixa
+                        </span>
+
+                        <span class="badge status-pending">
+                            Pendente
+                        </span>
+
+                    </article>
+
+
+                    <!-- Chamado 1039 -->
+                    <article class="ticket">
+
+                        <span class="ticket-id">
+                            #1039
+                        </span>
+
+                        <div class="ticket-info">
+
+                            <strong>
+                                Internet indisponível
+                            </strong>
+
+                            <span>
+                                Ana Oliveira • Administrativo
+                            </span>
+
+                        </div>
+
+                        <span class="badge priority-high">
+                            Alta
+                        </span>
+
+                        <span class="badge status-resolved">
+                            Resolvido
+                        </span>
+
+                    </article>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 RESUMO POR CATEGORIA
+            ================================================== -->
+
+            <article class="panel">
+
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h2>
+                            Resumo
+                        </h2>
+
+                        <p>
+                            Distribuição dos chamados
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary">
+
+
+                    <!-- Hardware -->
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+
+                            <span>
+                                Hardware
+                            </span>
+
+                            <strong>
+                                32%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 32%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Software -->
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+
+                            <span>
+                                Software
+                            </span>
+
+                            <strong>
+                                25%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 25%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Rede -->
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+
+                            <span>
+                                Rede / Internet
+                            </span>
+
+                            <strong>
+                                21%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 21%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Acesso -->
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+
+                            <span>
+                                Acesso / Senha
+                            </span>
+
+                            <strong>
+                                14%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 14%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Outros -->
+                    <div class="summary-item">
+
+                        <div class="summary-label">
+
+                            <span>
+                                Outros
+                            </span>
+
+                            <strong>
+                                8%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress"
+                                style="width: 8%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MONITORAMENTO DE SLA
+        ================================================== -->
+
+        <section class="sla-panel">
+
+
+            <div class="sla-description">
+
+                <span class="eyebrow">
+                    SLA
+                </span>
+
+                <h2>
+                    Monitoramento do atendimento
+                </h2>
+
+                <p>
+                    Acompanhe os chamados próximos do vencimento
+                    e mantenha o atendimento dentro do prazo.
+                </p>
+
+            </div>
+
+
+            <!-- Indicadores do SLA -->
+            <div class="sla-numbers">
+
+
+                <div class="sla-item">
+
+                    <strong>
+                        92%
+                    </strong>
+
+                    <span>
+                        Dentro do SLA
+                    </span>
+
+                </div>
+
+
+                <div class="sla-item">
+
+                    <strong>
+                        5
+                    </strong>
+
+                    <span>
+                        Próximos do vencimento
+                    </span>
+
+                </div>
+
+
+                <div class="sla-item">
+
+                    <strong>
+                        2
+                    </strong>
+
+                    <span>
+                        SLA estourado
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <p>
+            HelpDesk IT • Projeto de portfólio
+        </p>
+
+        <p>
+            Desenvolvido por Alisson Rodrigues
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         Os arquivos serão utilizados posteriormente para
+         adicionar as funcionalidades do sistema.
+    ====================================================== -->
+
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
